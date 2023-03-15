@@ -1,0 +1,730 @@
+@font-face {
+  font-family: 'cooper_hewittmedium';
+  src: url('/font/cooperhewitt-medium-webfont.woff2') format('woff2'),
+       url('/font/cooperhewitt-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+@font-face {
+  font-family: 'cooper_hewittbold';
+  src: url('/font/cooperhewitt-bold-webfont.woff2') format('woff2'),
+       url('/font/cooperhewitt-bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'cooper_hewittlight';
+  src: url('/font/cooperhewitt-light-webfont.woff2') format('woff2'),
+       url('/font/cooperhewitt-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'danielregular';
+  src: url('/font/daniel-regular-webfont.woff2') format('woff2'),
+       url('/font/daniel-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+/* Une portée global qui ne change pas selon la page*/ 
+
+body{
+    margin: 0; /*enlever des marges sur la page pour que les éléments prennet initialement toute la largeur*/
+    padding: 0;
+}
+
+p{
+    text-align: left; /*tout le texte est alignée à gauche*/
+    font-size: 24px; /*tout le texte est de taille 24 pixels*/
+}
+
+/*Les titres */ 
+h1, h2{
+    font-size: 64px;
+    text-align: center;
+    font-family: "cooper_hewittmedium", sans-serif;
+}
+
+/* Les elements de décoration qui doivent être à droite*/
+.decoration_right{
+    float: right;
+}
+
+/* La marge du contenu par rapport à la navigation fixée*/
+.start{
+    margin-top: 10%;
+}
+
+
+
+
+
+
+
+/*Header*/
+
+header{
+    background-color: #DE5B87;
+    width: 100%;
+    top: 0; 
+    text-align: center; 
+    position: fixed;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+header a{
+  color: aliceblue; 
+}
+
+/*le positionnement du texte à l'intérieur du block*/
+nav{
+    padding: 3px;
+    margin-right: 5%;
+}
+header ul li{
+  display: inline-block; 
+  list-style: none;
+  width: 15%;
+  font-size: 24px;
+}
+
+header a:hover {
+    color: #212167;
+  }
+
+
+
+
+
+/*Footer*/
+
+.footer {
+    position: relative;
+    width: 93.4%;
+    background: #DE5B87;
+    min-height: 100px; 
+
+
+
+
+
+
+
+
+/*block2: Texte d'éducation + la photo*/
+
+article{
+    margin-top: 200px;
+}
+.study_block{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+#study_text{
+    width: 50%;
+}
+
+#study_photo{
+    width: 40%;
+    height: 40%;
+
+}
+
+
+/*block3: la partie qui rassemble trois mini-blocks de competences*/
+
+.software_languages_skills{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 200px;
+}
+.software_languages{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.languages{
+  display: flex;
+  flex-direction: column;
+}
+/*Software: logiciels*/
+table tr td{
+ font-size: 30px;
+ padding: 20px;
+ text-align: center;
+}
+
+.logiciels_icons{
+  width: 75%;
+}
+
+#premier{
+  width: 60%;
+}
+/*Skills*/
+.skills{
+  width: 30%;
+}
+
+.skills ul li{
+    font-size: 30px;
+    padding-top: 32px;
+    font-size: 60px;
+}
+
+.skills_list li{
+    color: #DE5B87;
+}
+.skills_list li:first-line{
+    color:black
+}
+span{
+    font-size: 30px;
+}
+
+
+
+/*Boutton de la home page: view my portfolio*/
+.index_button{
+    display: block;
+    margin: auto; 
+    margin-top: 150px;
+    background-color: #DE5B87;
+    border: none;
+    padding: 20px;
+    width: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 48px;
+    border-radius: 12px;
+    color: aliceblue;
+}
+
+
+/*Animation du boutton*/
+.index_button:hover {
+transform: scale(1.1);
+transition: 1s;
+animation: hueRotation 5s linear infinite;
+}
+
+@keyframes hueRotation {
+to {filter: hue-rotate(360deg);}
+}
+
+iframe{
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 15px;
+    border: 30px solid #DE5B87;
+    padding: 1%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Futur jobs page*/ 
+
+.jobs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+/*Les blocs d'images*/
+
+
+.web_designer{
+    background-image: url("web_designer.png");
+    width: 600px;
+    height: 600px;
+}
+
+.director{
+  background-image: url("derector.png");
+  
+}
+
+.ux_ui{
+  background-image: url("ux.png");
+  margin-top: 150px;
+}
+
+.graphist{
+  background-image: url("graphist.png");
+  margin-top: 150px;
+}
+ /*Propriétés du texte sur les images*/
+.job_name{
+    color: white;
+    font-size: 64px;
+    text-align: center;
+    position: relative;
+}
+.job_text{
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: #000000a6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/*Animation du texte*/
+.jobsCarte {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    transition: 1s ease;
+}
+
+.jobsCarte p{
+  transition: 0.2s ease-in;
+}
+
+.jobsCarte:hover{
+    background-color: black;
+}
+
+
+.jobsCarte:hover p:nth-child(1){
+    animation: move 0.5s forwards;
+}
+
+@keyframes move{
+    0%{
+        margin-bottom: 0px;
+    }
+    100%{
+        margin-bottom: 70%;
+    }
+}
+
+.jobsCarte p:nth-child(2){
+    position: absolute;
+    opacity: 0;
+    transition: 0.8s ease;
+}
+
+.jobsCarte:hover p:nth-child(2){
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*Contact page*/ 
+
+/* Le formulaire fais deux blocks collés*/
+.formulaire{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 100px;
+    box-shadow: 7px 3px 17px 5px rgba(0,0,0,0.2);
+}
+
+/*Le côté gauche de formulaire*/
+.left_side{
+    height: 600px;
+    background-color: #DE5B87;
+}
+
+.left_side h2{
+    color: aliceblue;
+}
+
+input{
+  width: 80%;
+  height: 30px;
+  border: none;
+  background-color: #DE5B87;
+  border-bottom: solid 2px #e7e7e754 ;
+  margin-left: 10%;
+}
+
+input::placeholder{
+  padding-left: 4%;
+  color: #e7e7e783;
+}
+
+textarea{
+  width: 80%;
+  border: none;
+  background-color: #DE5B87;
+  border-bottom: solid 2px #e7e7e754 ;
+  margin-left: 10%;
+}
+textarea::placeholder{
+  padding-left: 4%;
+  color: #e7e7e783;
+}
+
+#form_button{
+  margin-top: 20px;
+  background-color: #212167;
+  border: none;
+  color: white;
+  padding: 20px;
+  width: 50%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 12px;
+  margin-left: 10%;
+}
+
+#form_button:hover{
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+/*Le côté droit du formulaire*/
+.right_side{
+    height: 600px;
+    padding-right: 50px;
+}
+
+.right_side p{
+    font-size: 24px;
+}
+
+
+.h2_contact{
+    font-size: 36px;
+}
+
+.contact_icon{
+    width: 30px;
+}
+
+.location, .phone, .mail{
+    display: flex;
+    gap: 30px;
+}
+
+.right_side{
+    padding-left: 5%;
+}
+
+
+
+
+
+
+
+
+/*Portfolio page*/
+
+section{
+    margin-top: 300px;
+}
+
+.h2_portfolio{
+  text-align: left;
+  margin-left: 5%;
+  margin-bottom: 150px;
+}
+
+/*La navigation de la page*/
+.start a{
+  color: black;
+}
+
+.portfolio_nav{
+    display: flex;
+    justify-content: space-around;
+}
+.portfolio_type{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.chifres{
+    font-size: 74px;
+    font-family: "danielregular";
+    height: 70px;
+}
+
+/*Section de logo design*/
+.logo_design{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/*section de web design*/
+.web_design{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.web_sites{
+    border-radius: 15px;
+}
+
+.web_sites:hover{
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+/*section de label design*/
+.miel_block{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.miel12{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*section de graphic design*/
+
+.carousel {
+    height: 600px;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 600px 100px; /* taille de contenaire*/ 
+    grid-template-columns: 50% 30px 30px 30px 30px 30px 30px 30px 1fr/* taille des petits points*/ 
+  }
+
+
+/*Le carousel*/
+main#carousel {
+    grid-row: 1 / 2;
+    grid-column: 1 / 8;
+    width: 97vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    --items: 7;
+    --middle: 3;
+    --position: 1;
+    pointer-events: none;
+  }
+  
+  div.item {
+    position: absolute;
+    width: auto;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --r: calc(var(--position) - var(--offset));
+    --abs: max(calc(var(--r) * -1), var(--r));
+    transition: all 0.25s linear;
+    transform: rotateY(calc(-10deg * var(--r)))
+      translateX(calc(-300px * var(--r))); /*distance des immages les uns par rapport aux autres*/
+    z-index: calc((var(--position) - var(--abs)));
+  }
+
+  #graphic_design{
+    margin-bottom: 150px;
+  }
+  
+  div.item img{
+    height: 100%;
+  }
+
+  div.item:nth-of-type(1) {
+    --offset: 1;
+  }
+  div.item:nth-of-type(2) {
+    --offset: 2;
+   
+  }
+  div.item:nth-of-type(3) {
+    --offset: 3;
+   
+  }
+  div.item:nth-of-type(4) {
+    --offset: 4;
+  
+  }
+  div.item:nth-of-type(5) {
+    --offset: 5;
+    
+  }
+  
+  div.item:nth-of-type(6) {
+    --offset: 6;
+    
+  }
+
+  div.item:nth-of-type(7) {
+    --offset: 7;
+    
+  }
+
+  input:nth-of-type(1) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(1):checked ~ main#carousel {
+    --position: 1;
+  }
+  
+  input:nth-of-type(2) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(2):checked ~ main#carousel {
+    --position: 2;
+  }
+  
+  input:nth-of-type(3) {
+    grid-column: 4 /5;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(3):checked ~ main#carousel {
+    --position: 3;
+  }
+  
+  input:nth-of-type(4) {
+    grid-column: 5 / 6;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(4):checked ~ main#carousel {
+    --position: 4;
+  }
+  
+  input:nth-of-type(5) {
+    grid-column: 6 / 7;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(5):checked ~ main#carousel {
+    --position: 5;
+  }
+
+  input:nth-of-type(6) {
+    grid-column: 7 / 8;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(6):checked ~ main#carousel {
+    --position: 6;
+  }
+
+  input:nth-of-type(7) {
+    grid-column: 8 / 9;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(7):checked ~ main#carousel {
+    --position: 7;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*PHP*/
+.php_body{
+  background-color: #FFD4BC;
+}
+.php{
+  position: relative;
+text-align: center;
+margin: auto;
+margin-top: 15%;
+width: 50%;
+border: solid 10px #DE5B87;
+padding: 15px;
+border-radius: 15px;
+font-size: 36px;
+z-index: 1;
+background-color: aliceblue;
+}
+
+/*bacground de la page php*/
+#video_php {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+  
+ 
+
+
+
+
+  
+  
+
+  
+
+  
